@@ -46,8 +46,7 @@ const menu = [
     price: "$18.99",
     img: "https://vanilla-js-basic-project-8-menu.netlify.app/images/item-6.jpeg",
     desc: "Portland chicharrones ethical edison bulb."
-  },
+  }
 ];
 
 export default menu;
-
