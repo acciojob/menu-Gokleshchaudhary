@@ -1,5 +1,6 @@
+// src/App.js
 import React, { useState } from "react";
-import Menu from "./components/Menu";
+import Menu from "./Menu"; // ✅ FIXED IMPORT PATH
 import menuData from "./data";
 import "./styles.css";
 
@@ -21,17 +22,13 @@ function App() {
           <h2>Our Menu</h2>
           <div className="underline"></div>
         </div>
+
         <div className="btn-container">
-          <button id="filter-btn-1" onClick={() => filterItems("breakfast")}>
-            Breakfast
-          </button>
-          <button id="filter-btn-2" onClick={() => filterItems("lunch")}>
-            Lunch
-          </button>
-          <button id="filter-btn-3" onClick={() => filterItems("shakes")}>
-            Shakes
-          </button>
+          <button id="filter-btn-1" onClick={() => filterItems("breakfast")}>Breakfast</button>
+          <button id="filter-btn-2" onClick={() => filterItems("lunch")}>Lunch</button>
+          <button id="filter-btn-3" onClick={() => filterItems("shakes")}>Shakes</button>
         </div>
+
         <Menu items={items} />
       </section>
     </main>
