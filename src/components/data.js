@@ -24,30 +24,6 @@ const menu = [
     img: "https://vanilla-js-basic-project-8-menu.netlify.app/images/item-3.jpeg",
     desc: "Ombucha chillwave fanny pack 3 wolf moon street art."
   },
-  {
-    id: 4,
-    title: "Country Delight",
-    category: "breakfast",
-    price: "$20.99",
-    img: "https://vanilla-js-basic-project-8-menu.netlify.app/images/item-4.jpeg",
-    desc: "Shabby chic keffiyeh neutra snackwave pork belly."
-  },
-  {
-    id: 5,
-    title: "Egg Attack",
-    category: "lunch",
-    price: "$22.99",
-    img: "https://vanilla-js-basic-project-8-menu.netlify.app/images/item-5.jpeg",
-    desc: "Franzen vegan pabst bicycle rights kickstarter."
-  },
-  {
-    id: 6,
-    title: "Oreo Dream",
-    category: "shakes",
-    price: "$18.99",
-    img: "https://vanilla-js-basic-project-8-menu.netlify.app/images/item-6.jpeg",
-    desc: "Portland chicharrones ethical edison bulb."
-  }
 ];
 
 export default menu;
