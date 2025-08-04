@@ -1,28 +1,23 @@
-// src/Menu.js
-import React from "react";
+import React from 'react';
 
-function Menu({ items }) {
+const Menu = ({ items }) => {
   return (
-    <div className="section-center">
-      {items.map((item) => {
-        const { id, title, img, desc, price, category } = item;
-        const testId = `menu-item-${category}`;
-
-        return (
-          <article key={id} className="menu-item" data-test-id={testId}>
-            <img src={img} alt={title} className="photo" />
-            <div className="item-info">
-              <header>
-                <h4>{title}</h4>
-                <h4 className="price">{price}</h4>
-              </header>
-              <p className="item-text">{desc}</p>
-            </div>
-          </article>
-        );
-      })}
+    <div className="menu-container">
+      {items.map(item => (
+        <div
+          key={item.id}
+          className="menu-item"
+          data-test-id={`menu-item-${item.category}`}
+        >
+          <img src={item.image} alt={item.name} />
+          <div className="menu-details">
+            <h3>{item.name}</h3>
+            <p>{item.price}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
-}
+};
 
 export default Menu;
