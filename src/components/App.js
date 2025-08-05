@@ -1,37 +1,34 @@
-import React, { useState } from 'react';
-import Menu from './Menu';
-import menuData from './data';
-import './styles.css';
+import React, { useState } from "react";
+import menuData from "./data";
+import Menu from "./Menu";
 
 function App() {
   const [menuItems, setMenuItems] = useState(menuData);
-  const [category, setCategory] = useState('All');
 
   const filterItems = (category) => {
-    setCategory(category);
-    if (category === 'All') {
+    if (category === "all") {
       setMenuItems(menuData);
     } else {
-      setMenuItems(menuData.filter((item) => item.category === category));
+      const newItems = menuData.filter((item) => item.category === category);
+      setMenuItems(newItems);
     }
   };
 
   return (
-    <div id="main">
-      <h1>Menu</h1>
-      <div className="buttons">
-        <button id="filter-btn-1" onClick={() => filterItems('Breakfast')}>
+    <main id="main">
+      <div className="btn-container">
+        <button id="filter-btn-1" onClick={() => filterItems("breakfast")}>
           Breakfast
         </button>
-        <button id="filter-btn-2" onClick={() => filterItems('Lunch')}>
+        <button id="filter-btn-2" onClick={() => filterItems("lunch")}>
           Lunch
         </button>
-        <button id="filter-btn-3" onClick={() => filterItems('Shakes')}>
+        <button id="filter-btn-3" onClick={() => filterItems("shakes")}>
           Shakes
         </button>
       </div>
       <Menu items={menuItems} />
-    </div>
+    </main>
   );
 }
 
