@@ -1,22 +1,23 @@
-// src/components/Menu.js
 import React from 'react';
 
-const Menu = ({ items }) => {
+function Menu({ items }) {
   return (
-    <div className="menu">
-      {items.map(item => (
+    <div className="menu-container">
+      {items.map((item) => (
         <div
-          key={item.id}
           className="menu-item"
-          data-test-id={`menu-item-${item.category}`}
+          key={item.id}
+          data-test-id={`menu-item-${item.category.toLowerCase()}`}
         >
-          <h3>{item.name}</h3>
-          <img src={item.image} alt={item.name} />
-          <p>{item.price}</p>
+          <img src={item.image} alt={item.name} className="menu-img" />
+          <div className="menu-info">
+            <h4>{item.name}</h4>
+            <p>{item.price}</p>
+          </div>
         </div>
       ))}
     </div>
   );
-};
+}
 
 export default Menu;
