@@ -7,7 +7,7 @@ const Menu = ({ items }) => {
         <article
           key={item.id}
           className="menu-item"
-          data-test-id={`menu-item-${item.category.toLowerCase()}`}
+          data-test-id={`menu-item-${item.category}`}
         >
           <img src={item.img} alt={item.title} className="photo" />
           <div className="item-info">
@@ -15,6 +15,7 @@ const Menu = ({ items }) => {
               <h4>{item.title}</h4>
               <h4 className="price">${item.price}</h4>
             </header>
+            <p className="item-text">{item.title}</p>
           </div>
         </article>
       ))}
